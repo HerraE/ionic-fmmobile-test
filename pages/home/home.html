@@ -1,18 +1,39 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Onlineshop Retoure</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Test</h2>
-  <button ion-button  block color="success">Test</button>
+<ion-content>
+  <div padding>
+    <button ion-button block icon-left color="secondary">
+      <ion-icon name="document"></ion-icon>
+      Vorgang anzeigen
+    </button>
+  </div>
+  <ion-item-divider color="light">
+    <ion-icon name="search"></ion-icon>
+    Auftragsuche
+  </ion-item-divider>
   <ion-list>
+    <ion-item><globus-input label="Auftragnummer" type="text" [(value)]="auftragSearch.auftragNr"></globus-input></ion-item>
+    <ion-item><globus-input label="Sendungsnummer" type="text" [(value)]="auftragSearch.sendungsNr"></globus-input></ion-item>
+    <ion-item><globus-input label="Von Datum" type="date" [(value)]="auftragSearch.vonDate"></globus-input></ion-item>
+    <ion-item><globus-input label="Bis Datum" type="date" [(value)]="auftragSearch.bisDate"></globus-input></ion-item>
+    <ion-item><globus-input label="Kunde" type="callback" [value]="kundeOutput"></globus-input></ion-item>
     <ion-item>
-      
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col col-4><h3>EANs</h3></ion-col>
+          <ion-col>
+            <button ion-button block icon-left color="secondary">
+              <ion-icon name="add"></ion-icon>
+              Hinzufügen
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
-    <ion-item>Test</ion-item>
-    <ion-item>Test</ion-item>
-    <ion-item>Test</ion-item>
+    
   </ion-list>
 </ion-content>

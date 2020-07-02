@@ -5,10 +5,13 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 
+import { GlobusInputComponent } from '../globus-ui/globus-input/globus-input';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    GlobusInputComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,8 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    GlobusInputComponent
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler}
